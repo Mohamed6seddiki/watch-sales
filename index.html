@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تايم لوكس - الساعات الفاخرة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">⌚</span>
+                <span id="logo-text">تايم لوكس</span>
+            </div>
+            <nav id="nav-ar" class="nav-content">
+                <a href="#collection">الرئيسية</a>
+                <a href="#collection">الساعات</a>
+                <a href="#about">اتصل بنا</a>
+            </nav>
+            <nav id="nav-fr" class="nav-content hidden">
+                <a href="#collection">Accueil</a>
+                <a href="#collection">Montres</a>
+                <a href="#about">Contact</a>
+            </nav>
+            <div class="lang-switcher">
+                <button class="lang-btn active" onclick="switchLanguage('ar')">AR</button>
+                <span class="separator">|</span>
+                <button class="lang-btn" onclick="switchLanguage('fr')">FR</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="featured">
+        <div class="hero-image">⌚</div>
+        <div class="hero-content">
+            <div class="featured-label" id="featured-label">ساعة مميزة</div>
+            <h1 id="hero-title">برستيج رويال الذهبية</h1>
+            <p id="hero-description">ساعة فاخرة من الذهب عيار 18 قيراط مع حركة سويسرية أوتوماتيكية</p>
+            <div class="price-section">
+                <div>
+                    <div class="price-label" id="price-label">السعر</div>
+                    <div class="price">DZD 25000</div>
+                </div>
+            </div>
+            <button class="cta-btn" id="cta-btn" onclick="openModal()">اطلب الآن</button>
+        </div>
+    </section>
+
+    <section class="collection-section" id="collection">
+        <div class="section-title">
+            <h2 id="collection-title">مجموعتنا الفاخرة</h2>
+            <p class="section-subtitle" id="collection-subtitle">قطع زمنية حصرية</p>
+        </div>
+
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">⌚</div>
+                <div class="product-info">
+                    <div class="product-name" data-ar="ماجيستيك الذهبية" data-fr="Majestic Doré" >ماجيستيك الذهبية</div>
+                    <p class="product-description" data-ar="إصدار محدود من الذهب الوردي مع حركة ميكانيكية" data-fr="Édition limitée en or rose avec mouvement mécanique" >إصدار محدود من الذهب الوردي مع حركة ميكانيكية</p>
+                    <div class="product-footer">
+                        <div class="product-price">32,000 DZD</div>
+                        <button class="detail-btn" data-ar="عرض التفاصيل" data-fr="Voir les détails" >عرض التفاصيل</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">⌚</div>
+                <div class="product-info">
+                    <div class="product-name" data-ar="إمبريال الكلاسيكية" data-fr="Impérial Classique" >إمبريال الكلاسيكية</div>
+                    <p class="product-description" data-ar="تصميم خالد مع سوار من الجلد الأصلي" data-fr="Design intemporel avec bracelet en cuir authentique" >تصميم خالد مع سوار من الجلد الأصلي</p>
+                    <div class="product-footer">
+                        <div class="product-price">12,000 DZD</div>
+                        <button class="detail-btn" data-ar="عرض التفاصيل" data-fr="Voir les détails" >عرض التفاصيل</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">⌚</div>
+                <div class="product-info">
+                    <div class="product-name" data-ar="إليت نوار الماسية" data-fr="Élite Noir Diamant" >إليت نوار الماسية</div>
+                    <p class="product-description" data-ar="ساعة أنيقة بميزاء أسود وتفاصيل ماسية" data-fr="Montre élégante avec cadran noir et détails diamantés" >ساعة أنيقة بميزاء أسود وتفاصيل ماسية</p>
+                    <div class="product-footer">
+                        <div class="product-price">18,500 DZD</div>
+                        <button class="detail-btn" data-ar="عرض التفاصيل" data-fr="Voir les détails" >عرض التفاصيل</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">⌚</div>
+                <div class="product-info">
+                    <div class="product-name" data-ar="بلاتينوم هيريتاج" data-fr="Platine Patrimoine" >بلاتينوم هيريتاج</div>
+                    <p class="product-description" data-ar="ساعة فاخرة من البلاتينوم النقي مع تصميم معقد" data-fr="Montre de luxe en platine pur avec design complexe" >ساعة فاخرة من البلاتينوم النقي مع تصميم معقد</p>
+                    <div class="product-footer">
+                        <div class="product-price">45,000 DZD</div>
+                        <button class="detail-btn" data-ar="عرض التفاصيل" data-fr="Voir les détails" >عرض التفاصيل</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">⌚</div>
+                <div class="product-info">
+                    <div class="product-name" data-ar="سافاير ريف" data-fr="Saphir Reef" >سافاير ريف</div>
+                    <p class="product-description" data-ar="ساعة مائية مع بلورة ياقوت بلو أصلية" data-fr="Montre étanche avec cristal de saphir bleu authentique" >ساعة مائية مع بلورة ياقوت بلو أصلية</p>
+                    <div class="product-footer">
+                        <div class="product-price">28,500 DZD</div>
+                        <button class="detail-btn" data-ar="عرض التفاصيل" data-fr="Voir les détails" >عرض التفاصيل</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">⌚</div>
+                <div class="product-info">
+                    <div class="product-name" data-ar="جولد ألفا" data-fr="Gold Alpha" >جولد ألفا</div>
+                    <p class="product-description" data-ar="تحفة ذهبية بتصميم حديث وأنيق" data-fr="Chef-d'œuvre doré avec un design moderne et élégant" >تحفة ذهبية بتصميم حديث وأنيق</p>
+                    <div class="product-footer">
+                        <div class="product-price">35,000 DZD</div>
+                        <button class="detail-btn" data-ar="عرض التفاصيل" data-fr="Voir les détails" >عرض التفاصيل</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p id="footer-text" data-ar="© 2025 تايم لوكس. جميع الحقوق محفوظة." data-fr="© 2025 Time Luxe. Tous droits réservés." >© 2025 تايم لوكس. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <!-- Order Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content" dir="rtl">
+            <div class="modal-header">
+                <h2 id="modal-title">نموذج الطلب</h2>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+
+            <div class="success-message" id="successMessage">
+                <span id="success-text">تم استقبال طلبك بنجاح!</span>
+            </div>
+
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="firstName" id="label-first-name">الاسم</label>
+                    <input type="text" id="firstName" placeholder=" الاسم" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName" id="label-last-name">اللقب</label>
+                    <input type="text" id="lastName" placeholder=" اللقب" required>
+                </div>
+
+                <div class="form-group">
+                <select id="wilaya" required>
+                    <option value="">اختر الولاية</option>
+                    <option value="أدرار">01 - أدرار</option>
+                    <option value="الشلف">02 - الشلف</option>
+                    <option value="الأغواط">03 - الأغواط</option>
+                    <option value="أم البواقي">04 - أم البواقي</option>
+                    <option value="باتنة">05 - باتنة</option>
+                    <option value="بجاية">06 - بجاية</option>
+                    <option value="بسكرة">07 - بسكرة</option>
+                    <option value="بشار">08 - بشار</option>
+                    <option value="البليدة">09 - البليدة</option>
+                    <option value="البويرة">10 - البويرة</option>
+                    <option value="تمنراست">11 - تمنراست</option>
+                    <option value="تبسة">12 - تبسة</option>
+                    <option value="تلمسان">13 - تلمسان</option>
+                    <option value="تيارت">14 - تيارت</option>
+                    <option value="تيزي وزو">15 - تيزي وزو</option>
+                    <option value="الجزائر">16 - الجزائر</option>
+                    <option value="الجلفة">17 - الجلفة</option>
+                    <option value="جيجل">18 - جيجل</option>
+                    <option value="سطيف">19 - سطيف</option>
+                    <option value="سعيدة">20 - سعيدة</option>
+                    <option value="سكيكدة">21 - سكيكدة</option>
+                    <option value="سيدي بلعباس">22 - سيدي بلعباس</option>
+                    <option value="عنابة">23 - عنابة</option>
+                    <option value="قالمة">24 - قالمة</option>
+                    <option value="قسنطينة">25 - قسنطينة</option>
+                    <option value="المدية">26 - المدية</option>
+                    <option value="مستغانم">27 - مستغانم</option>
+                    <option value="المسيلة">28 - المسيلة</option>
+                    <option value="معسكر">29 - معسكر</option>
+                    <option value="ورقلة">30 - ورقلة</option>
+                    <option value="وهران">31 - وهران</option>
+                    <option value="البيض">32 - البيض</option>
+                    <option value="إليزي">33 - إليزي</option>
+                    <option value="برج بوعريريج">34 - برج بوعريريج</option>
+                    <option value="بومرداس">35 - بومرداس</option>
+                    <option value="الطارف">36 - الطارف</option>
+                    <option value="تندوف">37 - تندوف</option>
+                    <option value="تيسمسيلت">38 - تيسمسيلت</option>
+                    <option value="الوادي">39 - الوادي</option>
+                    <option value="خنشلة">40 - خنشلة</option>
+                    <option value="سوق أهراس">41 - سوق أهراس</option>
+                    <option value="تيبازة">42 - تيبازة</option>
+                    <option value="ميلة">43 - ميلة</option>
+                    <option value="عين الدفلى">44 - عين الدفلى</option>
+                    <option value="النعامة">45 - النعامة</option>
+                    <option value="عين تموشنت">46 - عين تموشنت</option>
+                    <option value="غرداية">47 - غرداية</option>
+                    <option value="غليزان">48 - غليزان</option>
+                    <option value="تيميمون">49 - تيميمون</option>
+                    <option value="برج باجي مختار">50 - برج باجي مختار</option>
+                    <option value="أولاد جلال">51 - أولاد جلال</option>
+                    <option value="بني عباس">52 - بني عباس</option>
+                    <option value="إن صالح">53 - إن صالح</option>
+                    <option value="إن قزام">54 - إن قزام</option>
+                    <option value="تقرت">55 - تقرت</option>
+                    <option value="جانت">56 - جانت</option>
+                    <option value="المغير">57 - المغير</option>
+                    <option value="المنيعة">58 - المنيعة</option>
+                </select>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="phone" id="label-phone">رقم الهاتف</label>
+                    <input type="tel" id="phone" placeholder="+213 5XX XX XX XX" pattern="[0-9\+\s\-]{10,}" required>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submit-btn">تأكيد الطلب</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="style.js"></script>
+</body>
+</html>

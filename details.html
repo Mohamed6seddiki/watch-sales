@@ -207,6 +207,21 @@
     .back-link:hover {
         text-decoration: underline;
     }
+
+    @media (max-width: 768px) {
+        .container {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .image-box {
+            height: 300px;
+        }
+
+        .details h1 {
+            font-size: 28px;
+        }
+    }
 </style>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
@@ -319,18 +334,24 @@
 </div>
 
 <script>
+    let productData = null;
 
-    // عرض بيانات الساعة من sessionStorage (وليس localStorage)
-    const data = JSON.parse(sessionStorage.getItem("productDetails"));
-    
-    if (data) {
-        document.getElementById("p-img").src = data.img;
-        document.getElementById("p-name").textContent = data.name;
-        document.getElementById("p-price").textContent = data.price + " DZD";
-        document.getElementById("p-desc").textContent = data.desc || "ساعة فاخرة ذات جودة عالية.";
-    } else {
-        document.body.innerHTML = "<h2 style='color:white;text-align:center;margin-top:50px'>لا توجد بيانات لعرضها</h2>";
+    // عرض بيانات الساعة من localStorage
+    function loadProductData() {
+        const data = localStorage.getItem("productDetails");
+        
+        if (data) {
+            productData = JSON.parse(data);
+            document.getElementById("p-img").src = productData.img;
+            document.getElementById("p-name").textContent = productData.name;
+            document.getElementById("p-price").textContent = productData.price + " DZD";
+            document.getElementById("p-desc").textContent = productData.desc || "ساعة فاخرة ذات جودة عالية.";
+        } else {
+            document.body.innerHTML = "<h2 style='color:white;text-align:center;margin-top:50px'>لا توجد بيانات لعرضها</h2>";
+        }
     }
+
+    loadProductData();
 
     // فتح وإغلاق الـ Modal
     function orderNow() {
@@ -357,30 +378,32 @@
         const phone = document.getElementById("phone").value;
         const wilaya = document.getElementById("wilaya").value;
         
-        emailjs.send("service_w63c2wc", "template_wxy850h", {
-            firstName: firstName,
-            lastName: lastName,
-            phone: phone,
-            wilaya: wilaya,
-            product_name: data.name,
-            product_price: data.price
-        })
-        .then(function(response) {
-            console.log("SUCCESS!", response.status, response.text);
-            document.getElementById("successMessage").style.display = "block";
-            document.getElementById("orderForm").style.display = "none";
+        if (productData) {
+            emailjs.send("service_w63c2wc", "template_wxy850h", {
+                firstName: firstName,
+                lastName: lastName,
+                phone: phone,
+                wilaya: wilaya,
+                product_name: productData.name,
+                product_price: productData.price
+            })
+            .then(function(response) {
+                console.log("SUCCESS!", response.status, response.text);
+                document.getElementById("successMessage").style.display = "block";
+                document.getElementById("orderForm").style.display = "none";
 
-            setTimeout(() => {
-                closeModal();
-                document.getElementById("successMessage").style.display = "none";
-                document.getElementById("orderForm").style.display = "block";
-                document.getElementById("orderForm").reset();
-            }, 2000);
+                setTimeout(() => {
+                    closeModal();
+                    document.getElementById("successMessage").style.display = "none";
+                    document.getElementById("orderForm").style.display = "block";
+                    document.getElementById("orderForm").reset();
+                }, 2000);
 
-        }, function(error) {
-            console.log("FAILED...", error);
-            alert("حدث خطأ في إرسال الطلب. حاول من جديد.");
-        });
+            }, function(error) {
+                console.log("FAILED...", error);
+                alert("حدث خطأ في إرسال الطلب. حاول من جديد.");
+            });
+        }
     });
 </script>
 

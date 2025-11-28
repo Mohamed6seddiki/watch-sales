@@ -320,8 +320,8 @@
 
 <script>
 
-    // عرض بيانات الساعة من localStorage
-    const data = JSON.parse(localStorage.getItem("productDetails"));
+    // عرض بيانات الساعة من sessionStorage (وليس localStorage)
+    const data = JSON.parse(sessionStorage.getItem("productDetails"));
     
     if (data) {
         document.getElementById("p-img").src = data.img;

@@ -123,7 +123,7 @@ document.querySelectorAll(".detail-btn").forEach((button) => {
         const productImg = productCard.querySelector('.product-image img').src;
         const productDesc = productCard.querySelector('.product-description').textContent;
 
-        // احفظ البيانات في sessionStorage
+        // احفظ البيانات في localStorage
         const productData = {
             name: productName,
             price: productPrice,
@@ -131,7 +131,7 @@ document.querySelectorAll(".detail-btn").forEach((button) => {
             desc: productDesc
         };
 
-        sessionStorage.setItem("productDetails", JSON.stringify(productData));
+        localStorage.setItem("productDetails", JSON.stringify(productData));
         
         // اذهب لصفحة التفاصيل
         window.location.href = "details.html";

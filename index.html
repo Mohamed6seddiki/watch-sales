@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تايم لوكس - الساعات الفاخرة</title>
     <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init("vd8dcGWPQBgDm4pAK"); 
+    </script>
 </head>
+
 <body>
     <header>
         <div class="header-content">
@@ -16,7 +21,7 @@
             <nav id="nav-ar" class="nav-content">
                 <a href="#collection">الرئيسية</a>
                 <a href="#collection">الساعات</a>
-                <a href="#about">اتصل بنا</a>
+                <a href="#footer">اتصل بنا</a>
             </nav>
             <nav id="nav-fr" class="nav-content hidden">
                 <a href="#collection">Accueil</a>
@@ -32,11 +37,11 @@
     </header>
 
     <section class="hero" id="featured">
-        <div class="hero-image">⌚</div>
+        <div class="hero-image"><img src="src/photo (1).jpg" alt="eroo"></div>
         <div class="hero-content">
-            <div class="featured-label" id="featured-label">ساعة مميزة</div>
-            <h1 id="hero-title">برستيج رويال الذهبية</h1>
-            <p id="hero-description">ساعة فاخرة من الذهب عيار 18 قيراط مع حركة سويسرية أوتوماتيكية</p>
+            
+            <h1 id="hero-title">  ساعة كاسيو  A159W  </h1>
+            <p id="hero-description">أضف لمسة من الأناقة الكلاسيكية مع ساعة Casio A159 المتوفرة باللون الفضي و الذهبي.ساعة عملية بتصميم رجالي/نسائي، تجمع بين الشكل الكلاسيكي والأداء الممتاز</p>
             <div class="price-section">
                 <div>
                     <div class="price-label" id="price-label">السعر</div>
@@ -44,6 +49,7 @@
                 </div>
             </div>
             <button class="cta-btn" id="cta-btn" onclick="openModal()">اطلب الآن</button>
+            <a href="#collection" class="cta-btn" id="cta-btn-discover">اكتشف الآن</a>
         </div>
     </section>
 
@@ -53,12 +59,13 @@
             <p class="section-subtitle" id="collection-subtitle">قطع زمنية حصرية</p>
         </div>
 
+
         <div class="products-grid">
             <div class="product-card">
-                <div class="product-image">⌚</div>
+                <div class="product-image"><img src="src/photo (1).jpg" alt="err"></div>
                 <div class="product-info">
-                    <div class="product-name" data-ar="ماجيستيك الذهبية" data-fr="Majestic Doré" >ماجيستيك الذهبية</div>
-                    <p class="product-description" data-ar="إصدار محدود من الذهب الوردي مع حركة ميكانيكية" data-fr="Édition limitée en or rose avec mouvement mécanique" >إصدار محدود من الذهب الوردي مع حركة ميكانيكية</p>
+                    <div class="product-name" data-ar="  ساعة كاسيو A159W (فضية)" data-fr=" Montre Casio A159W (Argent)" >  ساعة كاسيو A159W (فضية)</div>
+                    <p class="product-description" data-ar="هذه الساعة من أشهر موديلات كاسيو الكلاسيكية، مناسبة للاستخدام اليومي وتناسب كل اللبسات — رسمية وكاجوال" data-fr="Cette montre est l'un des modèles classiques les plus populaires de Casio, idéale au quotidien et qui s'accorde avec toutes les tenues, formelles comme décontractées." >هذه الساعة من أشهر موديلات كاسيو الكلاسيكية، مناسبة للاستخدام اليومي وتناسب كل اللبسات — رسمية وكاجوال</p>
                     <div class="product-footer">
                         <div class="product-price">32,000 DZD</div>
                         <button class="detail-btn" data-ar="عرض التفاصيل" data-fr="Voir les détails" >عرض التفاصيل</button>
@@ -67,10 +74,10 @@
             </div>
 
             <div class="product-card">
-                <div class="product-image">⌚</div>
+                <div class="product-image"><img src="src/photo (2).jpg" alt=""></div>
                 <div class="product-info">
-                    <div class="product-name" data-ar="إمبريال الكلاسيكية" data-fr="Impérial Classique" >إمبريال الكلاسيكية</div>
-                    <p class="product-description" data-ar="تصميم خالد مع سوار من الجلد الأصلي" data-fr="Design intemporel avec bracelet en cuir authentique" >تصميم خالد مع سوار من الجلد الأصلي</p>
+                    <div class="product-name" data-ar=" ساعة كاسيوA159G (ذهبي)" data-fr="Montre Casio A159G (Or) " >ساعة كاسيو A159G (ذهبي) </div>
+                    <p class="product-description" data-ar="هذه الساعة من أشهر موديلات كاسيو الكلاسيكية، مناسبة للاستخدام اليومي وتناسب كل اللبسات — رسمية وكاجوال" data-fr="Cette montre est l'un des modèles classiques les plus populaires de Casio, idéale au quotidien et qui s'accorde avec toutes les tenues, formelles comme décontractées." >هذه الساعة من أشهر موديلات كاسيو الكلاسيكية، مناسبة للاستخدام اليومي وتناسب كل اللبسات — رسمية وكاجوال</p>
                     <div class="product-footer">
                         <div class="product-price">12,000 DZD</div>
                         <button class="detail-btn" data-ar="عرض التفاصيل" data-fr="Voir les détails" >عرض التفاصيل</button>
@@ -78,59 +85,21 @@
                 </div>
             </div>
 
-            <div class="product-card">
-                <div class="product-image">⌚</div>
-                <div class="product-info">
-                    <div class="product-name" data-ar="إليت نوار الماسية" data-fr="Élite Noir Diamant" >إليت نوار الماسية</div>
-                    <p class="product-description" data-ar="ساعة أنيقة بميزاء أسود وتفاصيل ماسية" data-fr="Montre élégante avec cadran noir et détails diamantés" >ساعة أنيقة بميزاء أسود وتفاصيل ماسية</p>
-                    <div class="product-footer">
-                        <div class="product-price">18,500 DZD</div>
-                        <button class="detail-btn" data-ar="عرض التفاصيل" data-fr="Voir les détails" >عرض التفاصيل</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="product-card">
-                <div class="product-image">⌚</div>
-                <div class="product-info">
-                    <div class="product-name" data-ar="بلاتينوم هيريتاج" data-fr="Platine Patrimoine" >بلاتينوم هيريتاج</div>
-                    <p class="product-description" data-ar="ساعة فاخرة من البلاتينوم النقي مع تصميم معقد" data-fr="Montre de luxe en platine pur avec design complexe" >ساعة فاخرة من البلاتينوم النقي مع تصميم معقد</p>
-                    <div class="product-footer">
-                        <div class="product-price">45,000 DZD</div>
-                        <button class="detail-btn" data-ar="عرض التفاصيل" data-fr="Voir les détails" >عرض التفاصيل</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">⌚</div>
-                <div class="product-info">
-                    <div class="product-name" data-ar="سافاير ريف" data-fr="Saphir Reef" >سافاير ريف</div>
-                    <p class="product-description" data-ar="ساعة مائية مع بلورة ياقوت بلو أصلية" data-fr="Montre étanche avec cristal de saphir bleu authentique" >ساعة مائية مع بلورة ياقوت بلو أصلية</p>
-                    <div class="product-footer">
-                        <div class="product-price">28,500 DZD</div>
-                        <button class="detail-btn" data-ar="عرض التفاصيل" data-fr="Voir les détails" >عرض التفاصيل</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">⌚</div>
-                <div class="product-info">
-                    <div class="product-name" data-ar="جولد ألفا" data-fr="Gold Alpha" >جولد ألفا</div>
-                    <p class="product-description" data-ar="تحفة ذهبية بتصميم حديث وأنيق" data-fr="Chef-d'œuvre doré avec un design moderne et élégant" >تحفة ذهبية بتصميم حديث وأنيق</p>
-                    <div class="product-footer">
-                        <div class="product-price">35,000 DZD</div>
-                        <button class="detail-btn" data-ar="عرض التفاصيل" data-fr="Voir les détails" >عرض التفاصيل</button>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
-    <footer>
-        <p id="footer-text" data-ar="© 2025 تايم لوكس. جميع الحقوق محفوظة." data-fr="© 2025 Time Luxe. Tous droits réservés." >© 2025 تايم لوكس. جميع الحقوق محفوظة.</p>
-    </footer>
+        <footer id="footer">
+            <p id="footer-text" 
+            data-ar="© 2025 تايم لوكس. جميع الحقوق محفوظة. البريد الإلكتروني: sweetimo2005@gmail.com الهاتف: +21355736239" 
+            data-fr="© 2025 Time Luxe. Tous droits réservés. Email: sweetimo2005@gmail.com Téléphone: +21355736239">
+                © 2025 تايم لوكس. جميع الحقوق محفوظة. <br>
+                البريد الإلكتروني: <a href="mailto:sweetimo2005@gmail.com">sweetimo2005@gmail.com</a> <br>
+                الهاتف: <a href="tel:+21355736239">+21355736239</a>
+            </p>
+        </footer>
+
+
 
     <!-- Order Modal -->
     <div id="orderModal" class="modal">

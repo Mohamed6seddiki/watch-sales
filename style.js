@@ -55,7 +55,7 @@ function switchLanguage(lang) {
 function updateContent(lang) {
     const texts = {
         ar: {
-            'logo-text': 'تايم لوكس',
+            'logo-text': 'تايملس',
             'featured-label': 'ساعة مميزة',
             'hero-title': 'ساعة كاسيو A159W',
             'hero-description': 'أضف لمسة من الأناقة الكلاسيكية مع ساعة Casio A159 المتوفرة باللون الفضي و الذهبي.ساعة عملية بتصميم رجالي/نسائي، تجمع بين الشكل الكلاسيكي والأداء الممتاز',
@@ -64,7 +64,7 @@ function updateContent(lang) {
             'cta-btn-discover':'اكتشف الان',
             'collection-title': 'مجموعتنا الفاخرة',
             'collection-subtitle': 'قطع زمنية حصرية',
-            'footer-text': '© 2025 تايم لوكس. جميع الحقوق محفوظة.',
+            'footer-text': '© 2025  تايملس. جميع الحقوق محفوظة.',
             'modal-title': 'نموذج الطلب',
             'label-first-name': 'الاسم',
             'label-last-name': 'اللقب',
@@ -74,7 +74,7 @@ function updateContent(lang) {
             'success-text': 'تم استقبال طلبك بنجاح!'
         },
         fr: {
-            'logo-text': 'Time Luxe',
+            'logo-text': ' Timeless',
             'featured-label': 'Montre Vedette',
             'hero-title': 'Casio A159',
             'hero-description': 'Ajoutez une touche d\'élégance classique avec la montre Casio A159 disponible en argent et or. Une montre pratique au design mixte, alliant style classique et performance exceptionnelle.',
@@ -83,7 +83,7 @@ function updateContent(lang) {
             'cta-btn-discover':'Découvrir',
             'collection-title': 'Notre Collection',
             'collection-subtitle': 'Pièces Exclusives',
-            'footer-text': '© 2025 Time Luxe. Tous droits réservés.',
+            'footer-text': '© 2025  Timeless. Tous droits réservés.',
             'modal-title': 'Formulaire',
             'label-first-name': 'Prénom',
             'label-last-name': 'Nom',

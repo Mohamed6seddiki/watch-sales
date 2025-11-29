@@ -146,17 +146,32 @@ document.querySelectorAll(".detail-btn").forEach((button) => {
 
 // ==================== CTA Button on Hero Section ====================
 // تحديث السعر والاسم عند الضغط على زر الطلب من الـ Hero
-const ctaBtn = document.getElementById('cta-btn');
-if (ctaBtn) {
-    ctaBtn.addEventListener('click', function() {
-        // الحصول على البيانات من الـ Hero Section
-        const heroTitle = document.getElementById('hero-title')?.textContent || 'ساعة كاسيو A159W';
-        const priceText = document.querySelector('.price')?.textContent || '2000 DZD';
-        const price = priceText.replace('DZD', '').trim();
-        
-        openModal(heroTitle, price);
-    });
-}
+window.addEventListener('load', function() {
+    const ctaBtn = document.getElementById('cta-btn');
+    if (ctaBtn) {
+        ctaBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // الحصول على البيانات من الـ Hero Section بدقة
+            const heroTitle = document.getElementById('hero-title')?.textContent?.trim() || 'ساعة كاسيو A159W';
+            const priceElement = document.querySelector('.hero-content .price');
+            const priceText = priceElement?.textContent?.trim() || '2000 DZD';
+            
+            // استخراج الرقم فقط من النص
+            const price = priceText.replace(/[^\d]/g, '');
+            
+            console.log('تم تحديث المنتج:', {
+                name: heroTitle,
+                price: price
+            });
+            
+            currentProduct.name = heroTitle;
+            currentProduct.price = price;
+            
+            openModal();
+        });
+    }
+});
 
 // ==================== Form Submit ====================
 form.addEventListener('submit', function(e) {

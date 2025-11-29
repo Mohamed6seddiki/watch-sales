@@ -8,7 +8,13 @@ let currentProduct = {
 const modal = document.getElementById('orderModal');
 const form = document.getElementById('orderForm');
 
-function openModal() {
+function openModal(productName = null, productPrice = null) {
+    // تحديث المنتج الحالي إذا تم تمرير البيانات
+    if (productName && productPrice) {
+        currentProduct.name = productName;
+        currentProduct.price = productPrice;
+    }
+    
     modal.classList.add('show');
     document.body.style.overflow = 'hidden';
 }
@@ -137,6 +143,20 @@ document.querySelectorAll(".detail-btn").forEach((button) => {
         window.location.href = "details.html";
     });
 });
+
+// ==================== CTA Button on Hero Section ====================
+// تحديث السعر والاسم عند الضغط على زر الطلب من الـ Hero
+const ctaBtn = document.getElementById('cta-btn');
+if (ctaBtn) {
+    ctaBtn.addEventListener('click', function() {
+        // الحصول على البيانات من الـ Hero Section
+        const heroTitle = document.getElementById('hero-title')?.textContent || 'ساعة كاسيو A159W';
+        const priceText = document.querySelector('.price')?.textContent || '2000 DZD';
+        const price = priceText.replace('DZD', '').trim();
+        
+        openModal(heroTitle, price);
+    });
+}
 
 // ==================== Form Submit ====================
 form.addEventListener('submit', function(e) {
